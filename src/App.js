@@ -9,6 +9,7 @@ export default function App() {
     const [forecast, setForecast] = useState('');
     const [hasSearched, setHasSearched] = useState(false);
     const [data, setData] = useState(null);
+
     const handleOnSearchChange = (searchData) => {
         setHasSearched(true);
         setData(searchData);

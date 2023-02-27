@@ -68,6 +68,7 @@ a:hover {
 
 #header-nav {
   mix-blend-mode: luminosity;
+  grid-column: 3 / 4;
   justify-content: right;
   align-items: center;
   gap: .5rem;
@@ -84,6 +85,19 @@ a:hover {
   font-family: Inter, sans-serif;
 }
 
+#search-wrap-center {
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#search-wrap-top h2 {
+  display: none;
+}
+
 @media (max-width: 900px) {
   #search {
     max-width: 100%;
@@ -91,7 +105,7 @@ a:hover {
   }
 }
 
-#search > div {
+#search > div, #search-center > div {
   border-color: #0000;
   border-radius: 1rem;
   padding: .5rem;
@@ -274,8 +288,8 @@ a:hover {
   }
 
   .forecast-card {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 5rem;
+    height: 5rem;
     border: 2px solid #0000006f;
     border-radius: 1rem;
     padding: .5rem;

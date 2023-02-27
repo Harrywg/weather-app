@@ -27160,27 +27160,27 @@ function App() {
                                     id: "header-logo"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 39,
+                                    lineNumber: 40,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                     children: "WeatherApp"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 40,
+                                    lineNumber: 41,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/App.js",
-                            lineNumber: 38,
+                            lineNumber: 39,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {
                             onSearchChange: handleOnSearchChange
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 42,
+                            lineNumber: 43,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
@@ -27191,7 +27191,7 @@ function App() {
                                     children: "View Code"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 44,
+                                    lineNumber: 45,
                                     columnNumber: 25
                                 }, this),
                                 "|",
@@ -27200,19 +27200,19 @@ function App() {
                                     children: " Harry Ward-Gray"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 46,
+                                    lineNumber: 47,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/App.js",
-                            lineNumber: 43,
+                            lineNumber: 44,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 37,
+                    lineNumber: 38,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _weatherDefault.default), {
@@ -27221,18 +27221,18 @@ function App() {
                     data: data
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 50,
+                    lineNumber: 51,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/App.js",
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 35,
+        lineNumber: 36,
         columnNumber: 9
     }, this);
 }
@@ -27264,6 +27264,7 @@ var _s = $RefreshSig$();
 function Search(props) {
     _s();
     const [search, setSearch] = (0, _react.useState)(null);
+    const [id, setId] = (0, _react.useState)("search-wrap-center");
     const loadOptions = (inputValue)=>{
         return fetch(`${(0, _api.GEO_DB_API_URL)}/cities?minPopulation=250000&sort=-population&namePrefix=${inputValue}`, (0, _api.GeoDBApiOptions)).then((response)=>response.json()).then((response)=>{
             return {
@@ -27280,24 +27281,41 @@ function Search(props) {
         }).catch((err)=>console.error(err));
     };
     const handleOnChange = (searchData)=>{
+        setId("search-wrap-top");
         setSearch(searchData);
         props.onSearchChange(searchData);
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSelectAsyncPaginate.AsyncPaginate), {
-        placeholder: "Search for City",
-        debounceTimeout: 600,
-        value: search,
-        onChange: handleOnChange,
-        loadOptions: loadOptions,
-        id: "search"
-    }, void 0, false, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: id,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Explore weather around the world."
+            }, void 0, false, {
+                fileName: "src/components/Search.js",
+                lineNumber: 33,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSelectAsyncPaginate.AsyncPaginate), {
+                placeholder: "Search for City",
+                debounceTimeout: 600,
+                value: search,
+                onChange: handleOnChange,
+                loadOptions: loadOptions,
+                id: "search"
+            }, void 0, false, {
+                fileName: "src/components/Search.js",
+                lineNumber: 34,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "src/components/Search.js",
-        lineNumber: 31,
+        lineNumber: 32,
         columnNumber: 9
     }, this);
 }
 exports.default = Search;
-_s(Search, "rZ+0pF47En10nDqJpRK7x4d9dB0=");
+_s(Search, "nFUErZmdJDgbaj3riaAeHvIlvz8=");
 _c = Search;
 var _c;
 $RefreshReg$(_c, "Search");
