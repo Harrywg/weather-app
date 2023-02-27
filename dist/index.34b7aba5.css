@@ -87,6 +87,7 @@ a:hover {
 
 #search-wrap-center {
   width: calc(100% - 2rem);
+  mix-blend-mode: luminosity;
   padding: 1rem;
   position: absolute;
   top: 40%;

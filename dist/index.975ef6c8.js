@@ -27187,7 +27187,8 @@ function App() {
                             id: "header-nav",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                    href: "http://localhost:1234/",
+                                    href: "https://github.com/Harrywg/weather-app",
+                                    target: "_blank",
                                     children: "View Code"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
@@ -27196,7 +27197,8 @@ function App() {
                                 }, this),
                                 "|",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                    href: "http://localhost:1234/",
+                                    href: "https://harrywg.dev/",
+                                    target: "_blank",
                                     children: " Harry Ward-Gray"
                                 }, void 0, false, {
                                     fileName: "src/App.js",

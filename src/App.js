@@ -42,9 +42,9 @@ export default function App() {
                     </div>
                     <Search onSearchChange={handleOnSearchChange} />
                     <nav id="header-nav">
-                        <a href='http://localhost:1234/'>View Code</a>
+                        <a href='https://github.com/Harrywg/weather-app' target={'_blank'}>View Code</a>
                         |
-                        <a href='http://localhost:1234/'> Harry Ward-Gray
+                        <a href='https://harrywg.dev/' target={'_blank'}> Harry Ward-Gray
                         </a>
                     </nav>
                 </header>
